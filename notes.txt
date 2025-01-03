@@ -1,0 +1,24 @@
+backend files : 
+
+● packeg.json : contains meta data (dependencies)
+● .env : configuration file 
+● readme, git, lint, prettier, etc
+
+------------------------------------------------------------
+backend directory structre : 
+
+● src : 
+    * index : DB connect
+● app :
+    config, cookie, urlencode
+● constants :
+    enums, DB-name
+
+● DB : db connection logic
+● Models : schema/structure of data
+● controllers : methods/function process data
+● routes : routing logic
+● middleware : 
+● utils : repeated component logic (utilities)
+● more : depends on architecture / design pattern
+------------------------------------------------------------
