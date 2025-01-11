@@ -22,3 +22,7 @@ backend directory structre :
 ● utils : repeated component logic (utilities)
 ● more : depends on architecture / design pattern
 ------------------------------------------------------------
+git branches :
+● main : main branch
+● practise : practise on express
+● prac2 : practise on mongoose / data modeling
