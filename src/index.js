@@ -1,29 +1,64 @@
-// import express from "express";
-        //or
-require('dotenv').config();
-const express = require('express');
+// require("dotenv").config({path: "./env"});
+import dotenv from "dotenv";
+
+// import mongoose from "mongoose";
+// import {DB_NAME} from "./constants.js";
+import connectDB from "./db/index.js"
+
+dotenv.config({
+    path: "./env"
+});
 
 
+
+
+connectDB();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+// Approch : using IFFE to connect to db
+// IFFE : Immediatetly invoked function execution 
+
+import express from "express";
 const app = express();
-const port = process.env.PORT;
 
 
-app.get("/",(req,res)=>{
-    res.send("Hello World!");
-});
-
-app.get("/twitter",(req,res)=>{
-    res.send("shravan_eleven");
-});
-
-app.get("/login",(req,res)=>{
-    res.send("<h1>login at chai aur code</h1>");
-});
-
-app.get("/youtube",(req,res)=>{
-    res.send("<h2>chai aur code</h2>");
-});
-
-app.listen(port,()=>{
-    console.log(`Example app listening on port ${port}`);
-});
+(async()=>{
+    try {
+       await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`);
+        app.on("error",()=>{
+            console.log("ERROR: ",error);
+            throw error;
+        });
+        app.listen(process.env.PORT, ()=>{
+            console.log(`App is listening on Port: ${process.env.PORT}`);
+            
+        })
+    } catch (error) {
+        console.log("ERROR: ",error);
+        throw err;
+    }
+})()
+*/
